@@ -36,7 +36,7 @@ var logger = app.Services.GetRequiredService<ILoggerManager>();
 app.ConfigueExceptionHandler(logger);
 
 // Configure the HTTP request pipeline.
-if (app.Environment.IsProduction())
+if (app.Environment.IsDevelopment())
 {
     app.UseHsts();
     
